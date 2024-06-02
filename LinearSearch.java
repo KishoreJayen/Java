@@ -1,22 +1,23 @@
-public class LinearSearch {
-    
-    public static void main(String[] args) {
-        int[] arr = {1, 2, 3, 4, 5, 6, 7, 8};
-        int target = 8;
-        int result = linearSearch(arr, target);
-        if(result != -1){
-            System.out.println("Element found at index " + result);
-        }else{
-            System.out.println("Not found.");
-        }
-    }
+package Maths;
 
-     static int linearSearch(int arr[], int target){
-          for(int i=0; i<arr.length; i++){
+public class LinearSearch {
+
+    public static void main(String[] args) {
+        int arr[] = {5,8,24,6,74};
+        int target = 24;
+        int result = linearSearch(arr, target);
+        if(result == -1){
+            System.out.println("Element not found in the array");
+            } else {
+                System.out.println("Element found at index " + result);
+            }
+    }
+    public static int linearSearch(int arr[] , int target){
+        for(int i=0; i<arr.length-1; i++){
             if(arr[i] == target){
                 return i;
             }
-          }
-          return -1;
+        }
+        return -1;
     }
 }
