@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class BinarySearch {
     public static void main(String[] args) {
         int arr[] = {7,2,65,12,98};
-        int target= 2;
+        int target= 98;
         int result = binarySearch(arr, target);
         if (result != -1){
             System.err.println("Element found at the Index at: "+ result);
@@ -15,6 +15,7 @@ public class BinarySearch {
         }
     }
     public static int binarySearch(int arr[], int target){
+        Arrays.sort(arr);
         int start = 0;
         int end = arr.length-1;
         while(start <= end){
